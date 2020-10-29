@@ -11,10 +11,13 @@ export default function App() {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <NextLink href="/about">About</NextLink>
+            <Link to="/about">About</Link>
           </li>
           <li>
             <Link to="/topics">Topics</Link>
+          </li>
+          <li>
+            <NextLink href="/settings">Settings (SSR)</NextLink>
           </li>
         </ul>
 
