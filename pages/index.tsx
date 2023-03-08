@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
 import NextLink from 'next/link';
 
 export default function App() {
@@ -21,17 +21,11 @@ export default function App() {
           </li>
         </ul>
 
-        <Switch>
-          <Route path="/about">
-            <h1>About</h1>
-          </Route>
-          <Route path="/topics">
-            <h1>Topics</h1>
-          </Route>
-          <Route path="/">
-            <h1>Home</h1>
-          </Route>
-        </Switch>
+        <Routes>
+          <Route path="/about" element={<h1>About</h1>} />
+          <Route path="/topics" element={<h1>Topics</h1>} />
+          <Route path="/" element={<h1>Home</h1>} />
+        </Routes>
       </div>
     </Router>
   );
